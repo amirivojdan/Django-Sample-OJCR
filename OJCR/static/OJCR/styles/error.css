@@ -1,0 +1,21 @@
+.error500
+{
+	color: red;
+	font-family: btitr,Tahoma,sans-serif;
+	font-size: x-large;
+	margin: 0 auto;
+	position: relative;
+	margin-right: 230px;
+	top: 180px;
+}
+
+.error404
+{
+	color: red;
+	font-family: btitr,Tahoma,sans-serif;
+	font-size: x-large;
+	margin: 0 auto;
+	position: relative;
+	margin-right: 270px;
+	top: 180px;
+}

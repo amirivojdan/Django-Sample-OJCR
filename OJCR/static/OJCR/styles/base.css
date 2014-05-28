@@ -1,0 +1,80 @@
+@font-face {
+	font-family: "btitr";
+	src: url("../fonts/BTitrBd.ttf") format("truetype");
+}
+
+.body{
+	background-image: url("../images/bg.png");
+	background-color: lightgray;
+	font-family: tahoma, serif;
+	font-size: 10pt;
+	direction: rtl;
+}
+
+.mainContainer{
+	z-index: 2;	
+	position: relative;
+	margin: auto;
+	margin-top: 20px;
+	width: 800px;
+	height: 500px;
+	background-color: darkgrey;
+	border-color: green;
+	border-style: solid;
+	border-width: 3px;
+	opacity: 0.9;
+	border-radius: 10px;
+	
+}
+
+.headerContainer{
+	font-size: large;
+	direction: rtl;
+	position: relative;
+	background-color: green;
+	width: 800px;
+	height: 50px;
+	border-radius: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: gray;
+	border-bottom-width: 2px;
+}
+
+.headerTitle
+{
+	position: relative;
+	top: 12px;
+	text-align: right;	
+	font-size: 16px; 
+	font-family: Tahoma,sans-serif;
+}
+
+.addNewItem{
+	position: relative;
+	margin-left: 15px;
+	text-align: right;	
+	font-size: 16px; 
+	font-family: btitr,Tahoma,sans-serif;
+	float: left;
+	
+}
+
+.contentContainer{
+	width: 800px;
+	height: 420px;
+	background-color:  lightgray;
+	border-radius: 5px;
+}
+
+.footerContainer{
+	text-align: center;
+	font-family: btitr,tahoma, serif;
+	z-index: 0;
+	width: 800px;
+	height: 23px;
+	background-color:  darkgrey;
+	border-color: black;
+	border-top-style:solid; 
+	border-width: 1px;
+	border-radius: 2px;
+}

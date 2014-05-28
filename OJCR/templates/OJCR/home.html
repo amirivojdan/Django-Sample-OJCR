@@ -1,0 +1,40 @@
+{% extends "OJCR/base.html" %}
+{% block resource %}
+
+		{{ block.super }}
+		{% load static from staticfiles %}
+		<link href="{% static "OJCR/styles/home.css" %}" rel="stylesheet" type="text/css">
+		
+{% endblock %}
+
+{% block content %}
+
+		<div class="listContainer">
+		   	
+		   	<div class="listHeaderRow">
+		   	   <div class="classPackageHeader">کلاس / پکیج</div>
+		   		<div class="classActionsHeader">عملیات</div>		   		
+		   	</div>
+
+{% for item in items %}
+		   	
+		   	<div class="entryContainer">
+		   		<div class="classPackageEntry">
+		   			<div>
+		   					<a href="{% url 'OJCR.views.edit_class' item.id %}" > ‫‪{{item.className}} </a>
+		   			</div>
+		   		</div>
+		   		<div class="classPacketMenu">
+		   				<div class="classPackageActions">
+		   						<a href="{% url 'OJCR.views.download_class' item.id %}" > دریافت </a>
+		   						 |
+		   						<a href="{% url 'OJCR.views.edit_class' item.id %}" > ویرایش </a>
+		   						 | 
+		   						<a href="{% url 'OJCR.views.remove_class' item.id %}" > حذف </a>
+		   				</div>
+		   		</div>		
+		   	</div><!-- end of entry  -->	 
+{%endfor%}		   	 		   			   	
+		</div><!-- end of list container -->
+
+{% endblock %}

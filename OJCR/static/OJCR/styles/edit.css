@@ -1,0 +1,48 @@
+.editorContainer
+{
+	position: relative;
+	width: 500px;
+	height: 400px;
+	margin: 0 auto;
+	border-width: 1px;
+	border-color: green;
+	border-style: solid;
+	top: 7px;
+	
+}
+
+.title{
+	font-family: btitr,Tahoma,sans-serif;
+	font-size: large;
+	margin-right: 5px;
+}
+
+.classEditBox
+{
+	width: 400px;
+	direction: ltr;
+	margin-right: 5px;
+}
+
+input[type=text]
+{
+	width: 400px;
+	direction: ltr;
+	margin-right: 5px;
+}
+
+textarea
+{
+	width: 400px;
+	height: 200px;
+	direction: ltr;
+	margin-right: 5px;
+}
+
+.error
+{
+	text-align: center;
+	color:red;
+	direction: ltr;
+	font-size: small;
+}

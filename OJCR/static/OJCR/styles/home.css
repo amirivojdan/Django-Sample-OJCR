@@ -1,0 +1,95 @@
+.listContainer
+{
+	position: relative;
+	top: 10px;
+	border-style: solid;
+	border-color: green;
+	border-width: 1px;
+	width: 720px;
+	height: 400px;
+	margin: 0 auto;
+	direction: rtl;
+	background-color: whitesmoke;
+	overflow-y: auto;
+}
+
+.listHeaderRow
+{
+	text-align: center;
+	background-color: lightblue;
+	height: 23px;
+	font-family: Tahoma,sans-serif;
+	border-bottom-style: solid;
+	border-color: gray;
+	border-width: 1px;
+}
+
+.classPackageHeader
+{	
+	width: 500px;
+ 	float: left;
+ 	margin-top: 2px;
+ 	font-family: Tahoma;
+	font-size: 16px;
+}
+
+.classActionsHeader
+{
+	width: 185px;
+	float: right;
+	margin-top: 2px;
+	font-family: Tahoma; 
+	font-size: 16px;
+}
+
+.entryContainer
+{
+	width: 695px;
+	border-style: solid;
+	margin-top: 3px;
+	display:inline-block;
+	border-color: darkgray;
+	border-width: 1px;
+	direction: ltr;
+	margin-right: 5px;
+	background-color: lightgray;
+}
+
+.classPackageEntry
+{
+	width: 480px;
+	float: left;
+	display:inline-block;
+	margin-left: 6px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-size: 15px;
+}
+
+
+.classPacketMenu
+{
+	width: 185px;
+	display:inline-block;
+	float: right;
+	margin-top: 5px;
+	font-size: 15px;
+}
+
+.classPackageInfo
+{
+	width: 185px;
+	margin-top: 3px;
+	display:inline-block;
+	font-size: smaller;
+	margin-bottom: 2px;
+	text-align: center;
+}
+
+.classPackageActions
+{
+	text-align: center;
+	width: 185px;
+	margin-top: 2px;
+ 	display:inline-block;
+}

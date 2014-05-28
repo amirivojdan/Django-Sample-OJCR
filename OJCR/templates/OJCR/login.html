@@ -1,0 +1,47 @@
+{% extends "OJCR/base.html" %}
+
+{% block resource %}
+
+		{{ block.super }}
+		{% load static from staticfiles %}
+		<link href="{% static "OJCR/styles/login.css" %}" rel="stylesheet" type="text/css">
+		
+{% endblock %}
+
+
+{% block content %}
+
+	<form method="post" action="" id="loginSection" class="loginContainer"> 
+	{% csrf_token %}
+		 <fieldset id="fieldsSection" class="fieldsContainer">
+
+				    <label class="fieldTitle">پست الکترونیک</label>
+ 					<div class="inputFields">{{form.email}}</div>
+ 					 {% for mail_error in form.email.errors %}
+  							  <label class="loginError">{{ mail_error }}</label><br>
+   				 {% endfor %}		    
+		    						 
+				    <label class="fieldTitle">رمز عبور</label>
+ 					<div class="inputFields">{{form.password}}</div>
+ 					 {% for pass_error in form.password.errors %}
+  							  <label class="loginError">{{ pass_error }}</label><br>
+   				 {% endfor %}
+ 							  			 
+			 <p>
+					 <input type="submit" class="inputButton" name="_loginButton_" id="loginButton" value="ورود">
+					 <input type="submit" class="inputButton" name="_registerButton_" id="registerButton" value="ثبت نام">
+					 <a href="/forgotpassword/" class="resetLink" id="forgotPassLink">گذرواژه را فراموش کرده‌اید ؟</a>
+			 </p>
+			 
+		
+	 	{% if login_error %}	
+		 	<p>		 
+					 <label class="loginError">{{ login_error }}</label>			 
+			</p>
+		{% endif %}
+
+		
+		 </fieldset> <!-- end of fields container -->
+	</form><!-- end of login container -->
+	
+{% endblock %}

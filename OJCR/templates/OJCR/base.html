@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+{# Website Title Block in base Template #}
+{% block title %}
+		{% if site_title %}
+				{{site_title}}
+		{% endif %}
+				
+{% endblock %} 
+</title> 
+
+{# Meta Tags Block in base Template #}
+{% block meta %}
+
+	{% if site_meta %} 
+	
+			{{site_meta}}
+			
+	{% else %} 	
+			<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+			<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+			<meta http-equiv="content-style-type" content="text/css">			
+	{% endif %}
+	
+{% endblock %} 
+
+{# Resource Block in base Template #}
+{% block resource %}
+
+		{% load staticfiles %}
+		
+		<link href="{% static "OJCR/styles/base.css" %}" rel="stylesheet" type="text/css">
+		
+
+{% endblock %} 
+
+</head>
+
+<body class="body">
+<div id="mainSection" class="mainContainer">
+
+		<div id="headerSection" class="headerContainer">
+			 
+			 {# header Block in base Template #}
+		    {% block header %} 
+		    
+					{% if user.is_authenticated %}
+						<div class="headerTitle">شما با ایمیل : {{user.email}} وارد شده اید <a href="{% url 'OJCR.views.do_logout' %}">خروج</a>
+						<div class="addNewItem"><a href="{% url 'OJCR.views.add_class' %}">ایجاد کلاس جدید</a>  </div>	
+						</div>	 
+											
+					{% endif %}
+					
+		    {% endblock %} 
+		    
+		</div><!-- end of the header container -->
+		
+		
+		<div id="contentSection" class="contentContainer"> 
+		    
+		    {# content Block in base Template #}
+			 {% block content %} 
+					{% if site_content %}
+						{{site_content}}
+					{% endif %}  
+		    {% endblock %} 
+		    
+		</div><!-- end of the content container -->
+		
+		
+		<div id="footerSection" class="footerContainer">
+		
+		    {# footer Block in base Template #}
+			 {% block footer %} 
+			 		{% if site_footer %}
+						 {{site_footer}}
+					{% endif %} 
+		    {% endblock %} 		
+		    
+		</div> <!-- end of the footer container -->
+
+
+</div><!-- end of the Main Container -->
+</body>
+</html>

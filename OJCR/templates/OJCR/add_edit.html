@@ -1,0 +1,42 @@
+{% extends "OJCR/base.html" %}
+{% block resource %}
+
+		{{ block.super }}
+		{% load static from staticfiles %}
+		<link href="{% static "OJCR/styles/edit.css" %}" rel="stylesheet" type="text/css">
+		
+{% endblock %}
+
+{% block content %}
+<div >
+	<form method="post" class="editorContainer">
+	{% csrf_token %}
+		
+		<p>
+			<label class="title">نام کلاس </label> <br>
+			<div > {{form.className}}</div>
+	{% for class_error in form.className.errors %}
+  					<label class="error">{{ class_error }}</label><br>
+   {% endfor %}	
+		
+
+		<br>
+			<label class="title">متن قابل چاپ </label> <br>
+			<div >{{form.message}}</div>
+	{% for message_error in form.message.errors %}
+  					<label class="error">{{ message_error }}</label><br>
+   {% endfor %}	
+		</p>
+		
+		
+	{% ifequal select 'add' %}
+   		 	<input class="title" name="_add_btn" type="submit" value="ایجاد">
+	{% else %}
+   		 	<input class="title" name="_edit_btn" type="submit" value="اعمال">
+	{% endifequal %}	
+		
+			<input class="title" name="_cancel_btn" type="submit" value="انصراف">
+		
+	</form>
+</div>
+{%endblock%}

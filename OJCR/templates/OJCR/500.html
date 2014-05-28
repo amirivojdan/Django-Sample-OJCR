@@ -1,0 +1,14 @@
+{% extends "OJCR/base.html" %}
+
+{% block resource %}
+
+		{{ block.super }}
+		{% load static from staticfiles %}
+		<link href="{% static "OJCR/styles/error.css" %}" rel="stylesheet" type="text/css">
+		
+{% endblock %}
+
+
+{% block content %}
+		<label class="error500"> در ارتباط با سرور مشکلی رخ داده است ! </label>
+{% endblock %}

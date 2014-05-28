@@ -1,0 +1,14 @@
+{% extends "OJCR/base.html" %}
+
+{% block resource %}
+
+		{{ block.super }}
+		{% load static from staticfiles %}
+		<link href="{% static "OJCR/styles/error.css" %}" rel="stylesheet" type="text/css">
+		
+{% endblock %}
+
+
+{% block content %}
+		<label class="error404"> صفحه مورد نظر یافت نشد !</label>
+{% endblock %}
